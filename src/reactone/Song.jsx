@@ -1,14 +1,12 @@
 import React from "react";
-import {Loop, Transport} from "tone"
+import {Transport} from "tone"
 
 export class Song extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      started: true
+      started: false
     };
-
-    Transport.start();
   }
 
   componentWillUnmount() {
