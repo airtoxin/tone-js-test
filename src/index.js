@@ -1,6 +1,5 @@
-import { Synth } from "tone";
+import React from "react";
+import ReactDom from "react-dom";
+import { App } from "./App";
 
-var synth = new Synth().toMaster();
-
-//play a middle 'C' for the duration of an 8th note
-synth.triggerAttackRelease("C4", "8n");
+ReactDom.render(React.createElement(App), document.getElementById("app"));

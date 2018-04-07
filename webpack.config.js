@@ -5,11 +5,16 @@ module.exports = {
     rules: [
       {
         use: "babel-loader",
-        test: /\.jsx$/
+        test: /\.jsx?$/
       }
     ]
   },
+  resolve: {
+    extensions: [".js", ".jsx", ".json"]
+  },
   plugins: [
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
   ]
 };
