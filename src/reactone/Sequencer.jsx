@@ -10,7 +10,7 @@ export class Sequencer extends React.Component {
       sequences: [false, false, false, false, false, false, false, false],
     }
 
-    this.synth = new Tone.Synth().toMaster();
+    this.synth = props.synth || new Tone.Synth().toMaster();
 
     this.sequence = new Tone.Sequence((time, note) => {
       if (note) this.synth.triggerAttackRelease(this.props.note, "8n");
